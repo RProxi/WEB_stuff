@@ -1,6 +1,6 @@
 let products_elem = document.getElementsByClassName("products-content")[0]
 
-function addItem(name, author, img_src) {
+function addItem(name, author, price, img_src) {
     const newItem = document.createElement("div")
     newItem.classList.add("products-item")
 
@@ -19,6 +19,11 @@ function addItem(name, author, img_src) {
     newName.textContent = name
     newItem.appendChild(newName)
 
+    const newPrice = document.createElement("p")
+    newPrice.classList.add("product-text")
+    newPrice.textContent = price + " p."
+    newItem.appendChild(newPrice)
+
     const newBtn = document.createElement("button")
     newBtn.classList.add("product-btn")
     newBtn.textContent = "Купить"
@@ -27,4 +32,4 @@ function addItem(name, author, img_src) {
     products_elem.appendChild(newItem)
 }
 
-addItem("TestName", "TestAuthor", "./assets/6014484247.jpg")
+addItem("TestName", "TestAuthor", 200, "./assets/6014484247.jpg")

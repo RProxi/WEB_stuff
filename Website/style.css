@@ -68,7 +68,7 @@ header {
 }
 .products-item {
     width: 185px;
-    height: 320px;
+    height: 350px;
     background-color: #acdfb9;
     display: flex;
     flex-direction: column;
