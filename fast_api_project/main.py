@@ -1,6 +1,6 @@
 from typing import Optional
 
-import uvicorn
+from uvicorn import run
 from fastapi import FastAPI, HTTPException
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel, Field
@@ -50,4 +50,4 @@ async def delete_item(item_id):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    run(app, host="127.0.0.1", port=8000)
